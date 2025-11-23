@@ -1,0 +1,2 @@
+pillow
+zeroscratches  # or your custom scratch model

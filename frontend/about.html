@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .background {
+      background-image: url('your-background-image.jpg'); /* Set your background image */
+      background-size: cover;
+      background-position: center;
+      filter: blur(6px);
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: -1;
+    }
+
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 15px;
+      max-width: 800px;
+      margin: 80px auto;
+      color: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #1d1d1d;
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+      font-size: 13px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-section {
+      flex: 1 1 180px;
+      margin: 0.5rem;
+    }
+
+    .footer-section h3 {
+      color: #00ffe1;
+      font-size: 16px;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-section a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.4rem;
+      font-size: 14px;
+    }
+
+    .footer-section a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-icons a {
+      display: inline-block;
+      margin-right: 10px;
+      color: #ccc;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+
+    .footer-icons a:hover {
+      color: #00ffe1;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 12px;
+      border-top: 1px solid #444;
+      margin-top: 1rem;
+      padding-top: 0.5rem;
+      color: #aaa;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media(max-width: 600px) {
+      .form-container { width: 90%; padding: 20px; }
+      h1 { font-size: 24px; }
+      p { font-size: 14px; }
+      .footer-container { flex-direction: column; align-items: center; }
+      .footer-section { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar__logo">
+      <img src="logo.png" alt="Logo" class="logo-img" />
+      <span class="navbar__title">Historical Image Restoration</span>
+    </div>
+    <nav class="navbar__nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <!-- New: My Gallery (hidden by default) -->
+  <a href="gallery.html" id="myGalleryLink" style="display: none;">My Gallery</a>
+      <a href="login.html">Login</a>
+      <button id="modeToggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+  <!-- Background Blur -->
+  <div class="background"></div>
+
+  <!-- About Us Content -->
+  <div class="form-container">
+    <h1>About Us</h1>
+    <p>Welcome to ImageRestore AI, where we specialize in restoring historical and damaged images with cutting-edge AI technology. Our mission is to bring the past back to life by enhancing and repairing images that have been damaged by time, weather, or other factors.</p>
+    <p>Whether it's old family photos, vintage artwork, or rare historical documents, our AI-driven restoration process ensures that each image is repaired and enhanced to the highest standards. We use advanced techniques like image colorization, crack and scratch removal, and noise reduction to restore the integrity and beauty of every picture.</p>
+    <p>Our team is dedicated to delivering high-quality results while preserving the authenticity of the original images. We aim to offer our services to individuals, organizations, and institutions who value the preservation of historical images and memorabilia.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <a href="#">Upload Guidelines</a>
+        <a href="#">Pricing</a>
+        <a href="#">FAQs</a>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="footer-icons">
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 ImageRestore AI. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Scratch Remover</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="navbar__logo">
+      <img src="logo.png" alt="Logo" class="logo-img" />
+      <span class="navbar__title">Historical Image Restoration</span>
+    </div>
+    <nav class="navbar__nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <!-- New: My Gallery (hidden by default) -->
+      <a href="gallery.html" id="myGalleryLink" style="display: none;">My Gallery</a>
+      <a href="login.html">Login</a>
+      <button id="modeToggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Bring Your Historical Photos Back to Life</h1>
+        <p class="hero-sub">AI-powered restoration for old, scratched, and faded images. Fast, private, and stunning
+          results!</p>
+        <button class="cta-btn" onclick="document.getElementById('step').scrollIntoView({behavior:'smooth'})">Get
+          Started</button>
+      </div>
+      <div class="hero-img">
+        <img src="logo.png" alt="Restore" />
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <h2>Why Choose Us?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <img src="https://img.icons8.com/color/48/ai.png" alt="AI" />
+          <h3>AI Powered</h3>
+          <p>Advanced AI algorithms restore your photos with precision and speed.</p>
+        </div>
+        <div class="feature-card">
+          <img src="https://img.icons8.com/color/48/lock--v1.png" alt="Privacy" />
+          <h3>Private & Secure</h3>
+          <p>Your images are processed securely and never shared.</p>
+        </div>
+        <div class="feature-card">
+          <img src="https://img.icons8.com/color/48/fast-forward.png" alt="Fast" />
+          <h3>Instant Results</h3>
+          <p>Get restored images in seconds. No waiting, no hassle.</p>
+        </div>
+        <div class="feature-card">
+          <img src="https://img.icons8.com/color/48/like.png" alt="Quality" />
+          <h3>High Quality</h3>
+          <p>Preserve memories with stunning clarity and color accuracy.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-works">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-icon">1</span>
+          <p>Upload your old or damaged photo</p>
+        </div>
+        <div class="step">
+          <span class="step-icon">2</span>
+          <p>Our AI removes scratches and restores details</p>
+        </div>
+        <div class="step" id="step">
+          <span class="step-icon">3</span>
+          <p>Download your beautifully restored image</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section class="upload-section">
+      <h2 id="upload-img">Upload Your Image</h2>
+      <p class="description">Easily remove scratches from your historical photos with our smart tool!</p>
+      <form id="uploadForm">
+        <label for="fileInput">Click to Upload or Drag & Drop</label>
+        <input type="file" name="image" id="fileInput" required />
+        <div class="button-row">
+          <button type="button" id="uploadBtn">Upload</button>
+          <button type="button" id="cleanBtn" disabled>Restore</button>
+        </div>
+      </form>
+      <h3 style="margin-top: 30px;">Original and Restored Images:</h3>
+      <div id="images"></div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <h2>What Users Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p>“I restored my grandparents’ wedding photo in seconds. Incredible!”</p>
+          <span>- Priya S.</span>
+        </div>
+        <div class="testimonial-card">
+          <p>“The results are amazing and the process is so easy. Highly recommended!”</p>
+          <span>- Rahul M.</span>
+        </div>
+        <div class="testimonial-card">
+          <p>“I love the quality. My family memories look brand new!”</p>
+          <span>- Aarti P.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Popup -->
+  <div class="modal" id="modal">
+    <div class="modal-content" id="modalContent">
+      <!-- Dynamic Content -->
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <a href="#">Upload Guidelines</a>
+        <a href="#">Pricing</a>
+        <a href="#">FAQs</a>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="footer-icons">
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 ImageRestore AI. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="user-session.js"></script>
+</body>
+
+</html>

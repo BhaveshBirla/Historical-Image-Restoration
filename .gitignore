@@ -1,0 +1,65 @@
+# Node dependencies
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Build / Logs
+logs/
+*.log
+*.out
+*.pid
+*.seed
+*.tgz
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Image uploads and results (should not push original data)
+static/uploads/
+static/results/
+
+# Multer temporary files
+uploads/
+
+# Production build (if using React or build tool)
+dist/
+build/
+
+# Editor settings
+.vscode/
+.idea/
+*.swp
+*~
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+.DS_Store?
+Thumbs.db
+desktop.ini
+
+# Backup files
+*.bak
+*.tmp
+*.temp
+*.old
+
+# Coverage & testing
+coverage/
+.nyc_output/

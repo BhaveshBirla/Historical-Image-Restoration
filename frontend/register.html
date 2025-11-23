@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Image Restoration</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar__logo">
+      <img src="logo.png" alt="Logo" class="logo-img" />
+      <span class="navbar__title">Historical Image Restoration</span>
+    </div>
+    <nav class="navbar__nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <!-- New: My Gallery (hidden by default) -->
+  <a href="gallery.html" id="myGalleryLink" style="display: none;">My Gallery</a>
+      <a href="login.html">Login</a>
+      <button id="modeToggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+    </nav>
+  </header>
+  <div class="background"></div>
+  <div class="form-container">
+    <h2>Register</h2>
+    <form id="registerForm">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <input type="password" name="confirmPassword" placeholder="Confirm Password" required /><br>
+      <button type="submit">Register</button>
+      <p>Already have an account? <a href="login.html">Login here</a></p>
+    </form>
+    <div id="registerMessage"></div>
+  </div>
+  <script src="register.js"></script>
+</body>
+</html>

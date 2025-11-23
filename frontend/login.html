@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Image Restoration</title>
+
+  <!-- Main styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar__logo">
+      <img src="logo.png" alt="Logo" class="logo-img" />
+      <span class="navbar__title">Historical Image Restoration</span>
+    </div>
+    <nav class="navbar__nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+
+      <!-- My Gallery (shown/hidden via user-session.js) -->
+      <a href="gallery.html" id="myGalleryLink" style="display: none;">My Gallery</a>
+
+      <a href="login.html" class="active">Login</a>
+      <button id="modeToggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+  <!-- Background + form -->
+  <div class="background"></div>
+
+  <div class="form-container">
+    <h2>Login</h2>
+
+    <form id="loginForm">
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Email"
+        required
+      />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+        required
+      /><br />
+      <button type="submit">Login</button>
+
+      <p>Don't have an account? <a href="register.html">Register here</a></p>
+      <p><a href="forgot-password.html">Forgot Password?</a></p>
+    </form>
+
+    <div id="loginMessage" style="margin-top: 10px;"></div>
+  </div>
+
+  <!-- Scripts: order matters -->
+  <script src="script.js"></script>        <!-- dark mode etc -->
+  <script src="user-session.js"></script>  <!-- show/hide My Gallery -->
+  <script src="login.js"></script>         <!-- login logic -->
+</body>
+
+</html>
